@@ -91,7 +91,7 @@ ed by the language code "es").
      * Prints all distinct language tags of country name translations sorted in alphabetical order.
      */
     public void streamPipeline11() {
-        // TODO
+       countries.stream().map(c -> c.getTranslations()).flatMap(t -> t.keySet().stream()).distinct().sorted().forEach(System.out::println);
     }
 
     /**
